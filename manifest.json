@@ -8,6 +8,7 @@
     "content_scripts": [
       {
         "matches": ["https://*.heise.de/*"],
+        "exclude_matches": ["https://*.heise.de/plus/*"],
         "run_at": "document_idle",
         "js": ["heiseminus.js"]
       }],
