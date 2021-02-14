@@ -76,7 +76,7 @@ function changeLogo() {
             let new_logo = document.createElement("img")
 
             // set the src to the new heise minus logo
-            new_logo.src = "https://raw.githubusercontent.com/jedi101/heiseminus/main/heiseminusIcon.png"
+            new_logo.src = "https://raw.githubusercontent.com/dasistdaniel/heiseminus/main/heiseminusIcon.png"
 
             // replace each heise plus logo with heise minus log
             Object.values(svg_object).forEach(value => {
