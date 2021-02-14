@@ -1,13 +1,10 @@
 console.log("Let it GO");
 
-// coarse selection of every node that has to be hidden
-let heiseminus = document.getElementsByClassName("heiseplus-logo-small")
-
 /**
  * Function calls
  */
 
-hideHeisePlusArticles(heiseminus)
+hideHeisePlusArticles()
 hideHeiseAside()
 changeLogo()
 
@@ -19,9 +16,11 @@ changeLogo()
  * Hide every heise plus node by traversing the document node from a given
  * coarse starting point up to it's parent node and setting its visibility
  * to none existing
- * @param {Node} heiseminus starting node for reverse traversal parent look up
  */
-function hideHeisePlusArticles(heiseminus) {
+function hideHeisePlusArticles() {
+    // coarse selection of every node that has to be hidden
+    let heiseminus = document.getElementsByClassName("heiseplus-logo-small")
+
     for (let index = 0; index < heiseminus.length; index++) {
         const artikel = heiseminus[index];
         const parent = findParentTag(artikel, "ARTICLE");

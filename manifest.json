@@ -1,6 +1,6 @@
 {
   "name": "Heise Minus",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Entfernt automatisch Heise Plus Artikel",
   "permissions": [
     "activeTab"
