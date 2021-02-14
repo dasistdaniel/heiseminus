@@ -54,10 +54,10 @@ function hideHeiseAside() {
     let selector = "#bottom-up > div:nth-child(2) > div.a-layout__main > div > aside"
 
     // select that aside node and set visibility to hidden
-    try{
+    try {
         document.querySelector(selector).hidden = true
-    } catch(error){
-        if (error.name == "TypeError"){
+    } catch (error) {
+        if (error.name == "TypeError") {
             console.log("TypeError : " + error.message)
         }
     }
@@ -69,17 +69,27 @@ function hideHeiseAside() {
  * the new heise minus logo
  */
 function changeLogo() {
-    // select every heise plus svg logo graphic
-    let svg_array = document.getElementsByClassName("heiseplus-logo")
+    try {
+        // try to select every heise plus svg logo graphic
+        let svg_object = document.getElementsByClassName("heiseplus-logo")
 
-    // create new_logo img tag for the heise minus logo
-    let new_logo = document.createElement("img")
+        if (typeof svg_object !== 'undefined') {
+            // create new_logo img tag for the heise minus logo
+            let new_logo = document.createElement("img")
 
-    // set the src to the new heise minus logo
-    new_logo.src = "https://raw.githubusercontent.com/jedi101/heiseminus/main/heiseminusIcon.png"
+            // set the src to the new heise minus logo
+            new_logo.src = "https://raw.githubusercontent.com/jedi101/heiseminus/main/heiseminusIcon.png"
 
-    // replace each heise plus logo with heise minus logo
-    svg_array.forEach(svg => {
-        svg.parentElement.replaceChild(new_logo, svg);
-    });
+            // replace each heise plus logo with heise minus log
+            Object.values(svg_object).forEach(value => {
+                value.parentElement.replaceChild(new_logo, value)
+            });
+
+        } else {
+            console.log("Didn't find any svg in the page")
+        }
+    } catch (error) {
+        // display error message if no svg found yet
+        console.log(error.message)
+    }
 }
