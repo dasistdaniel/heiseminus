@@ -13,7 +13,7 @@
       "exclude_matches": [
         "https://*.heise.de/plus/*"
       ],
-      "run_at": "document_idle",
+      "run_at": "document_end",
       "js": [
         "heiseminus.js"
       ]
@@ -22,5 +22,8 @@
   "icons": {
     "128": "heiseminusIcon.png"
   },
+  "web_accessible_resources" : [ 
+    "images/*.svg"
+  ],
   "manifest_version": 2
 }
