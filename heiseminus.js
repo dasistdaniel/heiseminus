@@ -84,7 +84,6 @@ function changeLogo() {
             Object.values(svg_object).forEach(value => {
                 value.parentElement.replaceChild(new_logo, value)
             });
-
         } else {
             console.log("Didn't find any svg in the page")
         }
