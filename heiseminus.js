@@ -9,6 +9,7 @@ let heiseminus = document.getElementsByClassName("heiseplus-logo-small")
 
 hideHeisePlusArticles(heiseminus)
 hideHeiseAside()
+changeLogo()
 
 /**
 * Function defiinitions
@@ -54,4 +55,24 @@ function hideHeiseAside() {
 
     // select that aside node and set visibility to hidden
     document.querySelector(selector).hidden = true
+}
+
+/**
+ * Searches for every heise plus svg logo and replaces it with
+ * the new heise minus logo
+ */
+function changeLogo() {
+    // select every heise plus svg logo graphic
+    let svg_array = document.getElementsByClassName("heiseplus-logo")
+
+    // create new_logo img tag for the heise minus logo
+    let new_logo = document.createElement("img")
+
+    // set the src to the new heise minus logo
+    new_logo.src = "https://raw.githubusercontent.com/jedi101/heiseminus/main/heiseminusIcon.png"
+
+    // replace each heise plus logo with heise minus logo
+    svg_array.forEach(svg => {
+        svg.parentElement.replaceChild(new_logo, svg);
+    });
 }
