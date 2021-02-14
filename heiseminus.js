@@ -54,7 +54,14 @@ function hideHeiseAside() {
     let selector = "#bottom-up > div:nth-child(2) > div.a-layout__main > div > aside"
 
     // select that aside node and set visibility to hidden
-    document.querySelector(selector).hidden = true
+    try{
+        document.querySelector(selector).hidden = true
+    } catch(error){
+        if (error.name == "TypeError"){
+            console.log("TypeError : " + error.message)
+        }
+    }
+
 }
 
 /**
