@@ -1,16 +1,26 @@
 {
-    "name": "Heise Minus",
-    "version": "0.0.2",
-    "description": "Entfernt automatisch Heise Plus Artikel",
-    "permissions": [
-      "activeTab"
-    ],
-    "content_scripts": [
-      {
-        "matches": ["https://*.heise.de/*"],
-        "exclude_matches": ["https://*.heise.de/plus/*"],
-        "run_at": "document_idle",
-        "js": ["heiseminus.js"]
-      }],
-    "manifest_version": 2
-  }
+  "name": "Heise Minus",
+  "version": "0.0.2",
+  "description": "Entfernt automatisch Heise Plus Artikel",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.heise.de/*"
+      ],
+      "exclude_matches": [
+        "https://*.heise.de/plus/*"
+      ],
+      "run_at": "document_idle",
+      "js": [
+        "heiseminus.js"
+      ]
+    }
+  ],
+  "icons": {
+    "128": "heiseminusIcon.png"
+  },
+  "manifest_version": 2
+}
