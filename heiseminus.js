@@ -61,7 +61,6 @@ function hideHeiseAside() {
             console.log("TypeError : " + error.message)
         }
     }
-
 }
 
 /**
