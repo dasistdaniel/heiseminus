@@ -84,10 +84,10 @@ function changeLogo() {
                 value.parentElement.replaceChild(new_logo, value)
             });
         } else {
+            // displays message if no svg found yet
             console.log("Didn't find any svg in the page")
         }
     } catch (error) {
-        // display error message if no svg found yet
         console.log(error.message)
     }
 }
