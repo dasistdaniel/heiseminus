@@ -1,3 +1,5 @@
+moved to codeberg --> [https://codeberg.org/dasistdaniel/heiseminus]
+
 ![heise minus](https://raw.githubusercontent.com/dasistdaniel/heiseminus/main/heiseminusIcon.png)
 # heise-
 is a Chrome extension to hide the "Heise Plus" Articles, which are Articles you need to pay for, from https://heise.de
